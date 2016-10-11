@@ -2,8 +2,9 @@
 
 > ionic ui 的 vue 实现版本
 - [Vue官网](http://vuejs.org/)  
-- [Ionic官网](http://ionicframework.com/)
-## 启动
+- [Ionic官网](http://ionicframework.com/)    
+
+## 启动     
 
 ``` bash
 # install dependencies
