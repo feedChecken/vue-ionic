@@ -1,8 +1,8 @@
 {
     "name": "so",
     "version": "1.0.0",
-    "description": "凹凹报销 前端",
-    "author": "xieenyuan@qq.com",
+    "description": "vue-ionic",
+    "author": "跟着大叔去保健",
     "private": true,
     "scripts": {
         "dev": "node build/dev-server.js",
