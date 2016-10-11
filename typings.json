@@ -1,0 +1,9 @@
+{
+  "name": "so",
+  "dependencies": {},
+  "globalDependencies": {
+    "vue": "registry:dt/vue#1.0.21+20160423143248",
+    "vue-resource": "registry:dt/vue-resource#0.7.0+20160316155526",
+    "vue-router": "registry:dt/vue-router#0.7.10+20160316155526"
+  }
+}
