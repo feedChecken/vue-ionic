@@ -19,7 +19,7 @@ npm run build
 ```
 
 ## 注 
-> 正在筹划开发中 有意共享请联系 xierenyuan@qq.com
+> 正在筹划开发中 有意贡献代码请联系 xierenyuan@qq.com
 
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
