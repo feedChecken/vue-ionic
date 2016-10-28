@@ -17,6 +17,7 @@ npm run dev
 npm run build
 
 ```
+> 通常说 可能你按上面执行呢 并木有跑起来, 请联系我 
 
 ## 注 
 > 正在筹划开发中 有意贡献代码请联系 xierenyuan@qq.com
