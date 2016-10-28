@@ -40,4 +40,4 @@
 
 ## 开发须知
 > 基于vue 2.0 开发
-
+> 规范 https://github.com/airbnb/javascript
