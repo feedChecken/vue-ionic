@@ -1,5 +1,9 @@
 <template>
-	<button class="disable-hover button button-ios button-default button-default-ios button-ios-light">
+    <button class="disable-hover button btn-default    " :class="[
+        theme ? role + theme:'',
+        theme ? 'btn-default-'+theme:'',
+        color ? role + theme + '-'+ color : ''
+     ]">
 		<span class="button-inner">
             <slot></slot>
         </span>
@@ -8,7 +12,22 @@
 </template>
 <script>
     export default {
-        name: 'ion-button'
+        name: 'ion-button',
+        data() {
+            return {
+                role: 'button-'
+            }
+        },
+        props: {
+            color: {
+                type: String,
+                default: 'default'
+            },
+            theme: {
+                type: String,
+                default: 'ios'
+            }
+        }
     };
 </script>
 <style lang="scss">

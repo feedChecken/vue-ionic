@@ -1,6 +1,3 @@
 <template>
-    <ion-button>哈哈哈</ion-button>
+    <router-view></router-view>
 </template>
-<script>
-    export default {}
-</script>

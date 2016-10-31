@@ -12,7 +12,11 @@ const router = new VueRouter({
     base: __dirname,
     routes: [{
         path: '/',
-        component: require('./App.vue')
+        component: require('./App.vue'),
+        children: [{
+            path: '/button',
+            component: require('./views/button.vue')
+        }]
     }]
 });
 
