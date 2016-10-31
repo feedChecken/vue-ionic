@@ -4,9 +4,11 @@
         type ? role + type : '',
         theme ? role + type + '-' + theme:'',
         aColor,
-        isActive?'activated':''
-
-     ]">
+        isActive?'activated':'',
+        aRound,
+        aBlock,
+        aFull,
+        aSize]">
 		<span class="button-inner">
             <slot></slot>
         </span>
@@ -32,6 +34,25 @@
                         return `${this.role}${this.type}-${theme}-${this.color}`;
                     default:
                         return `${this.role}${theme}-${this.color}`;
+                }
+            },
+            aRound: function() {
+                return this.round ? `button-round button-round-${this.theme}` : '';
+            },
+            aBlock: function() {
+                return this.block ? `button-block button-block-${this.theme}` : '';
+            },
+            aFull: function() {
+                return this.full ? `button-full button-full-${this.theme}` : '';
+            },
+            aSize: function() {
+                let size = this.size;
+                switch (this.size) {
+                    case 'small':
+                    case 'large':
+                        return `button-${size} button-${size}-${this.theme}`;
+                    default:
+                        return '';
                 }
             }
         },
@@ -75,6 +96,20 @@
                         'secondary',
                         'danger',
                         'dark'
+                    ].indexOf(value) > -1;
+                }
+            },
+            round: Boolean,
+            block: Boolean,
+            full: Boolean,
+            size: {
+                type: String,
+                default: 'default',
+                validator(value) {
+                    return [
+                        'default',
+                        'small',
+                        'large'
                     ].indexOf(value) > -1;
                 }
             }

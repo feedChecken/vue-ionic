@@ -11,17 +11,18 @@ import './themes/ionic.build.default.scss';
 
 import util from './utils/util';
 import Button from './components/button';
-
+import Icon from './components/icon';
 const VERSION = '0.0.1';
-
 const DEFAULT_CONFIG = {
     theme: 'ios',
-    version: VERSION
+    version: VERSION,
+    iconMode: ''
 };
 
 const install = function(Vue, opts = {}) {
     if (install.installed) return;
     Vue.component(Button.name, Button);
+    Vue.component(Icon.name, Icon);
     Vue.prototype.$ionic = util.extend(DEFAULT_CONFIG, opts);
 };
 
