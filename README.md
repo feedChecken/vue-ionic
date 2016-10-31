@@ -22,8 +22,8 @@ npm run build
 ## 如果喜欢 请star 我们（😍） 
 
 ## 已经完成组件（正在努力每周完成一个的速度）
-* [ion-button][https://github.com/feedCheicken/vue-ionic/tree/master/src/components/button]
-* [ion-icon][https://github.com/feedCheicken/vue-ionic/tree/master/src/components/icon]
+* [ion-button](https://github.com/feedCheicken/vue-ionic/tree/master/src/components/button)
+* [ion-icon](https://github.com/feedCheicken/vue-ionic/tree/master/src/components/icon)
 
 ## 注 
 > 正在筹划开发中 有意贡献代码请联系 xierenyuan@qq.com
