@@ -17,4 +17,5 @@
     @import './app.scss';
     @import './app.ios.scss';
     @import './app.md.scss';
+    @import './app.wp.scss';
 </style>

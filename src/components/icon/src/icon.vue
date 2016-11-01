@@ -1,5 +1,5 @@
 <template>
-  <i class="ion-icon" :class="[setName]"></i>
+    <i class="ion-icon" :class="[setName]"></i>
 </template>
 <script>
     const ICON_MODE = "ion";
@@ -13,7 +13,7 @@
                 let name = this.name;
                 if (!(/^md-|^ios-|^logo-/.test(name))) {
                     let theme = this.$ionic.theme;
-                    return `ion-${theme} ${ICON_MODE}-${theme}-${name}`;
+                    return `ion-${theme} ${ICON_MODE}-${theme === 'wp'?'ios':theme}-${name}`;
                 } else {
                     return name;
                 }
@@ -25,4 +25,5 @@
     @import './icon.scss';
     @import './icon.ios.scss';
     @import './icon.md.scss';
+    @import './icon.wp.scss';
 </style>

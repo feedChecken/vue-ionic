@@ -190,14 +190,14 @@ $navbar-ios-height: $toolbar-ios-height !default;
 
 // iOS Toolbar Button Icon
 // --------------------------------------------------
-.bar-button-ios.bar-button-icon-left ion-icon {
+.bar-button-ios.bar-button-icon-left .ion-icon {
     padding-right: .3em;
     font-size: 1.4em;
     line-height: .67;
     pointer-events: none;
 }
 
-.bar-button-ios.bar-button-icon-right ion-icon {
+.bar-button-ios.bar-button-icon-right .ion-icon {
     padding-left: .4em;
     font-size: 1.4em;
     line-height: .67;
@@ -209,7 +209,7 @@ $navbar-ios-height: $toolbar-ios-height !default;
     min-width: .9em;
 }
 
-.bar-button-ios[icon-only] ion-icon {
+.bar-button-ios[icon-only] .ion-icon {
     padding: 0 .1em;
     font-size: 1.8em;
     line-height: .67;
@@ -246,7 +246,7 @@ $navbar-ios-height: $toolbar-ios-height !default;
     margin: 0 6px;
     padding: 0;
     min-width: 36px;
-    ion-icon {
+    .ion-icon {
         padding: 0 6px;
         font-size: 2.8rem;
     }

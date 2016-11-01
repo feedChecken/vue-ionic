@@ -1,6 +1,7 @@
 <style lang="scss">
     .view {
         margin: 8px;
+        padding-top: 44px;
     }
     
     .ion-page {

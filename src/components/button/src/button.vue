@@ -1,5 +1,6 @@
 <template>
-    <button @touchstart="handleTouchStart" class="disable-hover button " :class="[
+    <button @touchstart="handleTouchStart" class="disable-hover  " :class="[
+        role,
         theme ? role + theme:'',
         type ? role + type : '',
         theme ? role + type + '-' + theme:'',
@@ -28,6 +29,7 @@
         },
         computed: {
             aColor: function() {
+
                 let theme = this.$ionic.theme;
                 switch (this.type) {
                     case 'outline':
@@ -51,11 +53,19 @@
                 switch (this.size) {
                     case 'small':
                     case 'large':
-                        return `button-${size} button-${size}-${this.theme}`;
+                        return `${this.role}${size} ${this.role}${size}-${this.theme}`;
                     default:
                         return '';
                 }
             }
+        },
+        created() {
+            // 如果是在组件 buttons 下则修改前缀为 bar-button-
+            let name = this.$parent.$data.componentName;
+            if (name === 'buttons') {
+                this.role = 'bar-button-';
+            }
+
         },
         methods: {
             handleTouchStart(evt) {
@@ -104,4 +114,5 @@
     @import './button-icon.scss';
     @import './button.ios.scss';
     @import './button.md.scss';
+    @import './button.wp.scss';
 </style>

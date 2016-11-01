@@ -28,4 +28,5 @@
     @import './toolbar.scss';
     @import './toolbar.ios.scss';
     @import './toolbar.md.scss';
+    @import './toolbar.wp.scss';
 </style>
