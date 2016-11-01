@@ -16,6 +16,9 @@ const router = new VueRouter({
         children: [{
             path: '/button',
             component: require('./views/button.vue')
+        }, {
+            path: '/header',
+            component: require('./views/header.vue')
         }]
     }]
 });

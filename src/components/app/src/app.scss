@@ -95,7 +95,7 @@ ion-tab.show-tab {
 
 // Toolbar Container Structure
 // --------------------------------------------------
-ion-header {
+.ion-header {
     position: absolute;
     top: 0;
     left: 0;
@@ -104,7 +104,7 @@ ion-header {
     width: 100%;
 }
 
-ion-footer {
+.ion-footer {
     position: absolute;
     bottom: 0;
     left: 0;

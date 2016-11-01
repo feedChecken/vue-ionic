@@ -9,4 +9,20 @@ export default {
             this.theme = this.$ionic.theme;
         }
     },
+    props: {
+        color: {
+            type: String,
+            default: 'default',
+            validator(value) {
+                return [
+                    'default',
+                    'primary',
+                    'light',
+                    'secondary',
+                    'danger',
+                    'dark'
+                ].indexOf(value) > -1;
+            }
+        }
+    }
 }

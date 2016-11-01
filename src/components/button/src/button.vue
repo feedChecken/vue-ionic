@@ -82,19 +82,6 @@
                     ].indexOf(value) > -1;
                 }
             },
-            color: {
-                type: String,
-                default: 'default',
-                validator(value) {
-                    return [
-                        'default',
-                        'light',
-                        'secondary',
-                        'danger',
-                        'dark'
-                    ].indexOf(value) > -1;
-                }
-            },
             round: Boolean,
             block: Boolean,
             full: Boolean,
