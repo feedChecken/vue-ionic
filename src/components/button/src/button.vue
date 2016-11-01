@@ -16,13 +16,14 @@
 	</button>
 </template>
 <script>
+    import ThemeMixin from 'src/minins/theme.mixins';
     export default {
         name: 'ion-button',
+        mixins: [ThemeMixin],
         data() {
             return {
                 role: 'button-',
-                isActive: false,
-                theme: 'ios'
+                isActive: false
             }
         },
         computed: {
@@ -54,11 +55,6 @@
                     default:
                         return '';
                 }
-            }
-        },
-        created() {
-            if (this.theme != this.$ionic.theme) {
-                this.theme = this.$ionic.theme;
             }
         },
         methods: {

@@ -1,12 +1,12 @@
 // Globals
 // --------------------------------------------------
-@import "../../themes/ionic.globals";
+@import "../../../themes/ionic.globals";
 // Normalize
 // --------------------------------------------------
-@import "../../themes/normalize";
+@import "../../../themes/normalize";
 // Util
 // --------------------------------------------------
-@import "../../themes/util";
+@import "../../../themes/util";
 // App Structure
 // --------------------------------------------------
 * {
@@ -40,11 +40,14 @@ body {
     word-wrap: break-word;
     text-size-adjust: none;
     user-select: none;
+    .ion-app {
+        overflow: visible;
+    }
 }
 
 // Nav Container Structure
 // --------------------------------------------------
-ion-app,
+.ion-app,
 ion-nav,
 ion-tab,
 ion-tabs,
