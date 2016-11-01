@@ -16,13 +16,14 @@
 	</button>
 </template>
 <script>
+    import ThemeMixin from 'src/minins/theme.mixins';
     export default {
         name: 'ion-button',
+        mixins: [ThemeMixin],
         data() {
             return {
                 role: 'button-',
-                isActive: false,
-                theme: 'ios'
+                isActive: false
             }
         },
         computed: {
@@ -56,11 +57,6 @@
                 }
             }
         },
-        created() {
-            if (this.theme != this.$ionic.theme) {
-                this.theme = this.$ionic.theme;
-            }
-        },
         methods: {
             handleTouchStart(evt) {
                 this.isActive = true;
@@ -83,19 +79,6 @@
                         'default',
                         'outline',
                         'clear'
-                    ].indexOf(value) > -1;
-                }
-            },
-            color: {
-                type: String,
-                default: 'default',
-                validator(value) {
-                    return [
-                        'default',
-                        'light',
-                        'secondary',
-                        'danger',
-                        'dark'
                     ].indexOf(value) > -1;
                 }
             },

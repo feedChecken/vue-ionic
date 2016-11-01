@@ -1,6 +1,6 @@
 # 按钮 [ ion-button ]
->Buttons are an essential way to interact with and navigate through an app, and should clearly communicate what action will occur after the user taps them. Buttons can consist of text and/or an icon, and can be enhanced with a wide variety of attributes
-> [demo 中预览地址 请npm run dev 后点击访问][http://localhost:8080/button ]
+> Buttons are an essential way to interact with and navigate through an app, and should clearly communicate what action will occur after the user taps them. Buttons can consist of text and/or an icon, and can be enhanced with a wide variety of attributes    
+> [demo 中预览地址 请npm run dev 后点击访问](http://localhost:8080/button)
 ### 基础用法 
 >The __color__ property sets the color of the button. Ionic includes a number of default colors which can be easily overridden 
 
