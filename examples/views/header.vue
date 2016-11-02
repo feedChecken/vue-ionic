@@ -15,6 +15,17 @@
                 </ion-buttons>
             </ion-toolbar>
         </ion-header>
+        <ion-content>
+            哈哈哈<br/>
+            哈哈哈<br/>
+            哈哈哈<br/>
+            哈哈哈<br/>
+            哈哈哈<br/>
+            哈哈哈<br/>
+            <img src="http://ionicframework.com/docs/v2/demos/src/scroll/map.jpeg" style="width: 2600px;height: 1400px;" alt="">
+            哈哈哈<br/>
+            底部
+        </ion-content>
          <ion-footer>
             <ion-toolbar >
                 <ion-title>footer</ion-title>

@@ -1,3 +1,8 @@
+  /**
+   *  button 组件
+   * @author xierenyuan@qq.com  
+   */
+
   const Button = require('./src/button.vue');
 
   /* istanbul ignore next */

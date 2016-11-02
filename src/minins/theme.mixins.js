@@ -1,3 +1,7 @@
+/**
+ * 主题通用 mixins
+ * @author xierenyuan@qq.com
+ */
 export default {
     data() {
         return {

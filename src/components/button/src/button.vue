@@ -1,5 +1,5 @@
 <template>
-    <button @touchstart="handleTouchStart" class="disable-hover  " :class="[
+    <button @touchstart="handleTouchStart"  class="disable-hover  " :class="[
         role,
         theme ? role + theme:'',
         type ? role + type : '',
@@ -29,7 +29,6 @@
         },
         computed: {
             aColor: function() {
-
                 let theme = this.$ionic.theme;
                 switch (this.type) {
                     case 'outline':
@@ -75,7 +74,6 @@
                 window.addEventListener('touchmove', this.handleTouchMove);
             },
             handleTouchMove(e) {
-                e.preventDefault();
                 this.isActive = false;
             }
         },

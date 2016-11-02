@@ -1,7 +1,12 @@
-  const Icon = require('./src/icon.vue');
+/**
+ *  icon 组件
+ * @author xierenyuan@qq.com  
+ */
 
-  /* istanbul ignore next */
-  Icon.install = function(Vue) {
-      Vue.component(Icon.name, Icon);
-  };
-  module.exports = Icon;
+const Icon = require('./src/icon.vue');
+
+/* istanbul ignore next */
+Icon.install = function(Vue) {
+    Vue.component(Icon.name, Icon);
+};
+module.exports = Icon;

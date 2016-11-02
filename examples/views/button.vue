@@ -25,8 +25,8 @@
                 <ion-title>buttons</ion-title>
             </ion-toolbar>
         </ion-header>
-        <div class=" view">
-            <ion-button color="light" @touchstart="clickHander"> 点击</ion-button>
+        <ion-content>
+            <ion-button color="light" @touchstart="clickHander" > 点击</ion-button>
             <ion-button color="light"> default</ion-button><br/>
             <ion-button> default</ion-button><br/>
             <ion-button color="secondary">secondary</ion-button><br/>
@@ -82,7 +82,7 @@
                     <ion-icon name="home"></ion-icon>
                 </ion-button>
             </p>
-        </div>
+        </ion-content>
     </div>
 </template>
 <script>
