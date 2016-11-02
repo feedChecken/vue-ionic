@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueIonic from '../src';
-Vue.use(VueIonic);
+Vue.use(VueIonic, { theme: 'ios' });
 Vue.use(VueRouter);
 
 //config

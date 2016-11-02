@@ -17,6 +17,7 @@
     "vue-router": "^2.0.1"
   },
   "devDependencies": {
+    "@types/vue": "^1.0.31",
     "autoprefixer": "^6.4.0",
     "babel-core": "^6.0.0",
     "babel-eslint": "^7.0.0",

@@ -20,6 +20,7 @@ import {
     Title,
     Buttons
 } from './components/header';
+import Content from './components/content';
 const VERSION = '0.0.1';
 const DEFAULT_CONFIG = {
     theme: 'ios',
@@ -37,6 +38,7 @@ const install = function(Vue, opts = {}) {
     Vue.component(ToolBar.name, ToolBar);
     Vue.component(Title.name, Title);
     Vue.component(Buttons.name, Buttons);
+    Vue.component(Content.name, Content);
     Vue.prototype.$ionic = util.extend(DEFAULT_CONFIG, opts);
 };
 
@@ -53,5 +55,6 @@ module.exports = {
     Footer,
     ToolBar,
     Title,
-    Buttons
+    Buttons,
+    Content
 };
