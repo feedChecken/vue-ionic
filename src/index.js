@@ -10,10 +10,12 @@ import 'ionicons/dist/css/ionicons.css';
 import './themes/ionic.build.default.scss';
 
 import Button from './components/button';
+import ActionSheet from './components/action-sheet';
 
 const install = function(Vue, opts = {}) {
     if (install.installed) return;
     Vue.component(Button.name, Button);
+    Vue.component(ActionSheet.name, ActionSheet);
 };
 
 /* istanbul ignore if */
@@ -24,5 +26,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 module.exports = {
     version: '0.0.1',
     install,
-    Button
+    Button,
+    ActionSheet
 };

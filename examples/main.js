@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueIonic from '../src';
+
+
 Vue.use(VueIonic);
 Vue.use(VueRouter);
 
@@ -8,20 +10,23 @@ Vue.use(VueRouter);
 Vue.config.debug = true;
 
 const router = new VueRouter({
-    mode: 'history',
-    base: __dirname,
-    routes: [{
-        path: '/',
-        component: require('./App.vue'),
-        children: [{
-            path: '/button',
-            component: require('./views/button.vue')
-        }]
-    }]
+	mode: 'history',
+	base: __dirname,
+	routes: [{
+		path: '/',
+		component: require('./App.vue'),
+		children: [{
+			path: '/button',
+			component: require('./views/button.vue')
+		},{
+			path:'/action-sheet',
+			component:require('./views/ActionSheetView.vue')
+		}]
+	}]
 });
 
 //启动
 const app = new Vue({
-    router
+	router
 }).$mount('#app');
 console.log('Hello');

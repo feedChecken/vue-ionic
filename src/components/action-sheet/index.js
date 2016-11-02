@@ -1,8 +1,19 @@
-const Alert = require('./src/main');
+import ActionSheet from './src/ActionSheet.vue'
 
 /* istanbul ignore next */
-Alert.install = function(Vue) {
-    Vue.component(Alert.name, Alert);
+ActionSheet.install = function (Vue) {
+  Vue.component(ActionSheet.name, ActionSheet);
 };
 
-module.exports = Alert;
+ActionSheet.create = function (option) {
+  var actionsheet = new ActionSheet({
+    el: document.createElement('div'),
+    data: option
+  });
+  
+  document.body.appendChild(actionsheet.$el);
+
+  return actionsheet;
+};
+
+export default ActionSheet;
