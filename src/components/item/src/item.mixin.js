@@ -3,8 +3,9 @@ export default {
     mixins: [ThemeMixin],
     data() {
         return {
-            viewLabel: true
-        }
+            viewLabel: true,
+            componentName: 'ionItem'
+        };
     },
     mounted() {
         //如果木有填label 则隐藏标签

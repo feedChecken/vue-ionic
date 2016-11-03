@@ -1,18 +1,18 @@
 @import "../../../themes/ionic.globals.ios";
 // iOS Item
 // --------------------------------------------------
-$item-ios-body-text-font-size : 1.6rem !default;
-$item-ios-paragraph-text-color : #666 !default;
-$item-ios-avatar-size : 3.6rem !default;
-$item-ios-thumbnail-size : 5.6rem !default;
-$item-ios-note-color : darken($list-ios-border-color, 10%) !default;
-$item-ios-detail-push-show : true !default;
-$item-ios-detail-push-color : $list-ios-border-color !default;
-$item-ios-detail-push-svg : "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 20'><path d='M2,20l-2-2l8-8L0,2l2-2l10,10L2,20z' fill='#{$item-ios-detail-push-color}'/></svg>" !default;
-$item-ios-divider-background : #f7f7f7 !default;
-$item-ios-divider-color : #222 !default;
-$item-ios-divider-padding : 5px 15px !default;
-$item-ios-sliding-content-background : $list-ios-background-color !default;
+$item-ios-body-text-font-size: 1.6rem !default;
+$item-ios-paragraph-text-color: #666 !default;
+$item-ios-avatar-size: 3.6rem !default;
+$item-ios-thumbnail-size: 5.6rem !default;
+$item-ios-note-color: darken($list-ios-border-color, 10%) !default;
+$item-ios-detail-push-show: true !default;
+$item-ios-detail-push-color: $list-ios-border-color !default;
+$item-ios-detail-push-svg: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 20'><path d='M2,20l-2-2l8-8L0,2l2-2l10,10L2,20z' fill='#{$item-ios-detail-push-color}'/></svg>" !default;
+$item-ios-divider-background: #f7f7f7 !default;
+$item-ios-divider-color: #222 !default;
+$item-ios-divider-padding: 5px 15px !default;
+$item-ios-sliding-content-background: $list-ios-background-color !default;
 // iOS Item
 // --------------------------------------------------
 .item-ios {
@@ -23,6 +23,7 @@ $item-ios-sliding-content-background : $list-ios-background-color !default;
     color: $list-ios-text-color;
     background-color: $list-ios-background-color;
     transition: background-color 200ms linear;
+    display: block;
 }
 
 .item-ios.activated {
@@ -85,20 +86,25 @@ $item-ios-sliding-content-background : $list-ios-background-color !default;
     margin: $item-ios-padding-media-top ($item-ios-padding-left / 2) $item-ios-padding-media-bottom ($item-ios-padding-right / 2);
 }
 
-.item-ios ion-icon[item-left],
-.item-ios ion-icon[item-right] {
+.item-ios .ion-icon[item-left],
+.item-ios .ion-icon[item-right] {
     margin-top: $item-ios-padding-icon-top;
     margin-bottom: $item-ios-padding-icon-bottom;
     margin-left: 0;
 }
 
-.item-ios ion-avatar[item-left],
-.item-ios ion-thumbnail[item-left] {
+// fix item 放icon 图标时 无法填充的bug
+.item-ios .ion-icon[item-left] {
+    float: left;
+}
+
+.item-ios .ion-avatar[item-left],
+.item-ios .ion-thumbnail[item-left] {
     margin: ($item-ios-padding-right / 2) $item-ios-padding-right ($item-ios-padding-right / 2) 0;
 }
 
-.item-ios ion-avatar[item-right],
-.item-ios ion-thumbnail[item-right] {
+.item-ios .ion-avatar[item-right],
+.item-ios .ion-thumbnail[item-right] {
     margin: ($item-ios-padding-right / 2);
 }
 
@@ -108,33 +114,33 @@ $item-ios-sliding-content-background : $list-ios-background-color !default;
     font-size: 1.3rem;
 }
 
-.item-ios .item-button[icon-only] ion-icon,
+.item-ios .item-button[icon-only] .ion-icon,
 .item-ios .item-button[icon-only] {
     padding: 0 1px;
 }
 
-.item-ios ion-avatar {
+.item-ios .ion-avatar {
     min-width: $item-ios-avatar-size;
     min-height: $item-ios-avatar-size;
 }
 
-.item-ios ion-avatar img {
+.item-ios .ion-avatar img {
     max-width: $item-ios-avatar-size;
     max-height: $item-ios-avatar-size;
     border-radius: $item-ios-avatar-size / 2;
 }
 
-.item-ios ion-thumbnail {
+.item-ios .ion-thumbnail {
     min-width: $item-ios-thumbnail-size;
     min-height: $item-ios-thumbnail-size;
 }
 
-.item-ios ion-thumbnail img {
+.item-ios .ion-thumbnail img {
     max-width: $item-ios-thumbnail-size;
     max-height: $item-ios-thumbnail-size;
 }
 
-.item-ios ion-note {
+.item-ios .ion-note {
     color: $item-ios-note-color;
 }
 

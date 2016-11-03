@@ -1,21 +1,21 @@
 @import "../../../themes/ionic.globals.ios";
 // iOS List
 // --------------------------------------------------
-$list-ios-margin-top : 10px !default;
-$list-ios-margin-right : 0 !default;
-$list-ios-margin-bottom : 32px !default;
-$list-ios-margin-left : 0 !default;
-$list-inset-ios-margin-top : 16px !default;
-$list-inset-ios-margin-right : 16px !default;
-$list-inset-ios-margin-bottom : 16px !default;
-$list-inset-ios-margin-left : 16px !default;
-$list-inset-ios-border-radius : 4px !default;
-$list-ios-header-padding-left : $item-ios-padding-left !default;
-$list-ios-header-font-size : 1.2rem !default;
-$list-ios-header-font-weight : 500 !default;
-$list-ios-header-letter-spacing : .1rem !default;
-$list-ios-header-color : #333 !default;
-$list-ios-header-background-color : transparent !default;
+$list-ios-margin-top: 10px !default;
+$list-ios-margin-right: 0 !default;
+$list-ios-margin-bottom: 32px !default;
+$list-ios-margin-left: 0 !default;
+$list-inset-ios-margin-top: 16px !default;
+$list-inset-ios-margin-right: 16px !default;
+$list-inset-ios-margin-bottom: 16px !default;
+$list-inset-ios-margin-left: 16px !default;
+$list-inset-ios-border-radius: 4px !default;
+$list-ios-header-padding-left: $item-ios-padding-left !default;
+$list-ios-header-font-size: 1.2rem !default;
+$list-ios-header-font-weight: 500 !default;
+$list-ios-header-letter-spacing: .1rem !default;
+$list-ios-header-color: #333 !default;
+$list-ios-header-background-color: 0 0!default;
 // iOS Default List
 // --------------------------------------------------
 .list-ios {
@@ -102,7 +102,7 @@ $list-ios-header-background-color : transparent !default;
     border-bottom: 0;
 }
 
-.list-ios[inset]+ion-list[inset] {
+.list-ios[inset]+.ion-list[inset] {
     margin-top: 0;
 }
 
@@ -117,7 +117,7 @@ $list-ios-header-background-color : transparent !default;
 
 // iOS List Header
 // --------------------------------------------------
-.list-header-ios {
+.ion-list-header.list-header-ios {
     position: relative;
     padding-left: $list-ios-header-padding-left;
     border-bottom: $hairlines-width solid $list-ios-border-color;

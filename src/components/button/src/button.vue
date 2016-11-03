@@ -9,7 +9,8 @@
         aRound,
         aBlock,
         aFull,
-        aSize]">
+        aSize,
+        isParentItem ? 'item-button' : '' ]">
 		<span class="button-inner">
             <slot></slot>
         </span>
@@ -24,7 +25,9 @@
         data() {
             return {
                 role: 'button-',
-                isActive: false
+                isActive: false,
+                //如果是在item 组件内部则为true
+                isParentItem: false
             }
         },
         computed: {
@@ -63,6 +66,10 @@
             let name = this.$parent.$data.componentName;
             if (name === 'buttons') {
                 this.role = 'bar-button-';
+            }
+            //如果在item 组件里 则加上class  
+            if (name === 'ionItem') {
+                this.isParentItem = true;
             }
 
         },

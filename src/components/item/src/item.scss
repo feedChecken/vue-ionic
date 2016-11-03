@@ -57,11 +57,11 @@
     border: 0;
 }
 
-ion-item-group {
+.ion-item-group {
     display: block;
 }
 
-ion-item-divider {
+.ion-item-divider {
     z-index: $z-index-item-divider;
     display: flex;
     overflow: hidden;
@@ -73,7 +73,7 @@ ion-item-divider {
     min-height: 30px;
 }
 
-ion-item-divider[sticky] {
+.ion-item-divider[sticky] {
     position: sticky;
     top: 0;
 }
