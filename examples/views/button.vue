@@ -25,7 +25,7 @@
                 <ion-title>buttons</ion-title>
             </ion-toolbar>
         </ion-header>
-        <ion-content>
+        <ion-content padding>
             <ion-button color="light" @touchstart="clickHander" > 点击</ion-button>
             <ion-button color="light"> default</ion-button><br/>
             <ion-button> default</ion-button><br/>

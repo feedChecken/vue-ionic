@@ -13,14 +13,12 @@ import util from './utils/util';
 import App from './components/app';
 import Button from './components/button';
 import Icon from './components/icon';
-import {
-    Header,
-    Footer,
-    ToolBar,
-    Title,
-    Buttons
-} from './components/header';
+import { Header, Footer, ToolBar, Title, Buttons } from './components/header';
 import Content from './components/content';
+import Label from './components/label';
+import { List, ListHeader } from './components/list';
+import Item from './components/item';
+import ItemGroup from './components/item-group';
 const VERSION = '0.0.1';
 const DEFAULT_CONFIG = {
     theme: 'ios',
@@ -39,6 +37,11 @@ const install = function(Vue, opts = {}) {
     Vue.component(Title.name, Title);
     Vue.component(Buttons.name, Buttons);
     Vue.component(Content.name, Content);
+    Vue.component(Label.name, Label);
+    Vue.component(List.name, List);
+    Vue.component(ListHeader.name, ListHeader);
+    Vue.component(Item.name, Item);
+    Vue.component(ItemGroup.name, ItemGroup);
     Vue.prototype.$ionic = util.extend(DEFAULT_CONFIG, opts);
 };
 
@@ -56,5 +59,10 @@ module.exports = {
     ToolBar,
     Title,
     Buttons,
-    Content
+    Content,
+    Label,
+    List,
+    ListHeader,
+    Item,
+    ItemGroup
 };
