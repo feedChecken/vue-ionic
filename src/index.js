@@ -19,13 +19,13 @@ import Label from './components/label';
 import { List, ListHeader } from './components/list';
 import Item from './components/item';
 import ItemGroup from './components/item-group';
+import Note from './components/note';
 const VERSION = '0.0.1';
 const DEFAULT_CONFIG = {
     theme: 'ios',
     version: VERSION,
     iconMode: ''
 };
-
 const install = function(Vue, opts = {}) {
     if (install.installed) return;
     Vue.component(Button.name, Button);
@@ -42,6 +42,7 @@ const install = function(Vue, opts = {}) {
     Vue.component(ListHeader.name, ListHeader);
     Vue.component(Item.name, Item);
     Vue.component(ItemGroup.name, ItemGroup);
+    Vue.component(Note.name, Note);
     Vue.prototype.$ionic = util.extend(DEFAULT_CONFIG, opts);
 };
 
@@ -64,5 +65,6 @@ module.exports = {
     List,
     ListHeader,
     Item,
-    ItemGroup
+    ItemGroup,
+    Note
 };
