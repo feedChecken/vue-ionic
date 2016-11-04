@@ -20,6 +20,7 @@ import { List, ListHeader } from './components/list';
 import Item from './components/item';
 import ItemGroup from './components/item-group';
 import Note from './components/note';
+import Thumbnail from './components/thumbnail';
 const VERSION = '0.0.1';
 const DEFAULT_CONFIG = {
     theme: 'ios',
@@ -43,6 +44,7 @@ const install = function(Vue, opts = {}) {
     Vue.component(Item.name, Item);
     Vue.component(ItemGroup.name, ItemGroup);
     Vue.component(Note.name, Note);
+    Vue.component(Thumbnail.name, Thumbnail);
     Vue.prototype.$ionic = util.extend(DEFAULT_CONFIG, opts);
 };
 
@@ -66,5 +68,6 @@ module.exports = {
     ListHeader,
     Item,
     ItemGroup,
-    Note
+    Note,
+    Thumbnail
 };

@@ -1,7 +1,7 @@
 @import "../../../themes/ionic.globals";
 // Item reorder
 // --------------------------------------------------
-ion-reorder {
+.ion-reorder {
     display: none;
     flex: 1;
     align-items: center;
@@ -16,15 +16,15 @@ ion-reorder {
     touch-action: manipulation;
 }
 
-ion-reorder ion-icon {
+.ion-reorder .ion-icon {
     pointer-events: none;
 }
 
-.reorder-enabled ion-reorder {
+.reorder-enabled .ion-reorder {
     display: flex;
 }
 
-.reorder-visible ion-reorder {
+.reorder-visible .ion-reorder {
     transform: translate3d(0, 0, 0);
 }
 

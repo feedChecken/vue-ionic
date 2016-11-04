@@ -19,9 +19,15 @@ const children = [{
     path: '/label',
     component: require('./views/label.vue')
 }];
+
 children.push({
     path: '/list',
     component: require('./views/list/list.vue')
+});
+
+children.push({
+    path: '/thumbnail',
+    component: require('./views/list/thumbnails.vue')
 });
 
 const router = new VueRouter({
