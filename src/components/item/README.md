@@ -2,7 +2,7 @@
 > 时间关系.. 我后边在慢慢补充文档吧...
 
 ## demo 
-```
+```html
         <ion-header>
             <ion-toolbar color="primary">
                 <ion-title>list</ion-title>
@@ -87,13 +87,3 @@
             </ion-list>
         </ion-content>
 ```
-
-## 下边有一大波图 高能  
-### ios
-![ios](./static/ionic-list-ios.png)
-
-### md
-![md](./static/ionic-list-md.png)
-
-### wp
-![wp](./static/ionic-list-wp.png)
