@@ -161,18 +161,18 @@ $item-ios-sliding-content-background: $list-ios-background-color !default;
 
 // iOS Item Group
 // --------------------------------------------------
-ion-item-group .item-ios:first-child .item-inner {
+.ion-item-group .item-ios:first-child .item-inner {
     border-top-width: 0;
 }
 
-ion-item-group .item-ios:last-child .item-inner,
-ion-item-group .item-wrapper:last-child .item-ios .item-inner {
+.ion-item-group .item-ios:last-child .item-inner,
+.ion-item-group .item-wrapper:last-child .item-ios .item-inner {
     border: 0;
 }
 
 // iOS Item Divider
 // --------------------------------------------------
-ion-item-divider.item-ios {
+.ion-item-divider.item-ios {
     padding-left: $item-ios-padding-left;
     color: $item-ios-divider-color;
     background-color: $item-ios-divider-background;
@@ -196,6 +196,6 @@ $color-contrast in get-colors($colors-ios) {
 
 // iOS Item Sliding
 // --------------------------------------------------
-.list-ios ion-item-sliding {
+.list-ios .ion-item-sliding {
     background-color: $item-ios-sliding-content-background;
 }

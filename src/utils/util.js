@@ -95,7 +95,9 @@ export default {
         if (protoProps && protoProps.hasOwnProperty('constructor')) {
             child = protoProps.constructor;
         } else {
-            child = function() { return parent.apply(this, arguments); };
+            child = function() {
+                return parent.apply(this, arguments);
+            };
         }
 
         // Add static properties to the constructor function, if supplied.
@@ -103,7 +105,9 @@ export default {
 
         // Set the prototype chain to inherit from `parent`, without calling
         // `parent`'s constructor function.
-        var Surrogate = function() { this.constructor = child; };
+        var Surrogate = function() {
+            this.constructor = child;
+        };
         Surrogate.prototype = parent.prototype;
         child.prototype = new Surrogate();
 
@@ -116,6 +120,52 @@ export default {
         child.__super__ = parent.prototype;
 
         return child;
+    },
+    /**
+     * 
+     * 判断css 是否存在 在dom 节点
+     * @param {any} el Document
+     * @param {any} cls css 类名
+     */
+    hasClass(el, cls) {
+        //获取class 内容
+        let elClass = el.className;
+        //通过split空字符将cls转换成数组
+        let arrElCls = elClass.split(/\s+/);
+        return arrElCls.indexOf(cls) != -1;
+    },
+
+    /**
+     * 
+     * 添加 class
+     * @param {any} el
+     * @param {any} cls
+     */
+    addClass(el, cls) {
+        //获取 class 内容
+        let elClass = el.className;
+        //判断获取到的 class 是否为空, 如果不为空在前面加个'空格'.
+        let blank = (elClass != '') ? ' ' : '';
+        el.className = elClass + blank + cls;
+    },
+
+    /**
+     * 
+     * 移除class
+     * @param {any} el
+     * @param {any} cls
+     */
+    removeClass(el, cls) {
+        //获取 class 内容, 并在首尾各加一个空格. ex) 'abc        bcd' -> ' abc        bcd '
+        let elClass = ` ${el.className} `;
+        //将多余的空字符替换成一个空格. ex) ' abc        bcd ' -> ' abc bcd '
+        elClass = elClass.replace(/(\s+)/gi, ' ');
+        //在原来的 class 替换掉首尾加了空格的 class. ex) ' abc bcd ' -> 'bcd '
+        let removed = elClass.replace(` ${cls} `, ' ');
+        //去掉首尾空格. ex) 'bcd ' -> 'bcd'
+        removed = removed.replace(/(^\s+)|(\s+$)/g, '');
+        //替换原来的 class.
+        el.className = removed;
     }
 
 };
