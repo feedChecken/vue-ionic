@@ -25,6 +25,14 @@ npm run build
 * [ion-button](https://github.com/feedCheicken/vue-ionic/tree/master/src/components/button)
 * [ion-icon](https://github.com/feedCheicken/vue-ionic/tree/master/src/components/icon)
 * [ion-header](https://github.com/feedCheicken/vue-ionic/tree/master/src/components/header)
+* [ion-footer]
+* [ion-list](https://github.com/feedCheicken/vue-ionic/tree/master/src/components/list)
+* [ion-item-group]
+* [ion-item](https://github.com/feedCheicken/vue-ionic/tree/master/src/components/item)
+* [ion-label](https://github.com/feedCheicken/vue-ionic/tree/master/src/components/label)
+* [ion-note](https://github.com/feedCheicken/vue-ionic/tree/master/src/components/note)
+* [ion-content](https://github.com/feedCheicken/vue-ionic/tree/master/src/components/content)
+* [ion-app]
 
 ## 注 
 > 正在筹划开发中 有意贡献代码请联系 xierenyuan@qq.com
