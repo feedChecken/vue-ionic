@@ -1,10 +1,10 @@
 # VUE-IONIC
 
-> ionic ui 的 vue 实现版本
+> vue 2.0 components && ionic2 ui （ionic ui 的 vue 实现版本）
 - [Vue官网](http://vuejs.org/)  
 - [Ionic官网](http://ionicframework.com/)    
 
-## 启动     
+## Quick Start(启动)     
 
 ``` bash
 # install dependencies
@@ -17,11 +17,11 @@ npm run dev
 npm run build
 
 ```
-> 通常说 可能你按上面执行呢 并木有跑起来, 请联系我 
+>startup errors to contact me (通常说 可能你按上面执行呢 并木有跑起来, 请联系我) 
 
-## 如果喜欢 请star 我们（😍） 
+## Like star (如果喜欢 请star 我们😍） 
 
-## 已经完成组件（正在努力每周完成一个的速度）
+## Done [已经完成组件（正在努力每周完成一个的速度）]
 * [ion-button](https://github.com/feedCheicken/vue-ionic/tree/master/src/components/button)
 * [ion-icon](https://github.com/feedCheicken/vue-ionic/tree/master/src/components/icon)
 * [ion-header](https://github.com/feedCheicken/vue-ionic/tree/master/src/components/header)
@@ -34,11 +34,11 @@ npm run build
 * [ion-content](https://github.com/feedCheicken/vue-ionic/tree/master/src/components/content)
 * [ion-app]
 
-## 注 
-> 正在筹划开发中 有意贡献代码请联系 xierenyuan@qq.com
+## Contribution（注） 
+> email me（ 正在筹划开发中 有意贡献代码请联系 xierenyuan@qq.com）
 
 
-## 下边有一大波图 高能  
+## Preview (下边有一大波图 高能）
 ### ios
 ![ios-list](./src/components/item/static/ion-list-ios.png)
 

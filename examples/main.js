@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueIonic from '../src';
 Vue.use(VueIonic, {
-    theme: 'wp'
+    theme: 'ios'
 });
 Vue.use(VueRouter);
 
