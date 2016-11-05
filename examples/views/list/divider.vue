@@ -1,0 +1,73 @@
+<template>
+    <div>
+        <ion-header>
+            <ion-toolbar>
+                <ion-title>List Dividers</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+            <ion-list>
+                <ion-item-group>
+                    <ion-item type="divider">
+                        A
+                    </ion-item>
+                    <ion-item>
+                        Angola
+                    </ion-item>
+                    <ion-item>
+                        Argentina
+                    </ion-item>
+                    <ion-item>
+                        Armenia
+                    </ion-item>
+                    <ion-item>
+                        Australia
+                    </ion-item>
+                    <ion-item>
+                        Austria
+                    </ion-item>
+                </ion-item-group>
+                <ion-item-group>
+                    <ion-item type="divider">
+                        B
+                    </ion-item>
+                    <ion-item>
+                        Bangladesh
+                    </ion-item>
+                    <ion-item>
+                        Belarus
+                    </ion-item>
+                    <ion-item>
+                        Belgium
+                    </ion-item>
+                    <ion-item>
+                        Bhutan
+                    </ion-item>
+                    <ion-item>
+                        Brazil
+                    </ion-item>
+                </ion-item-group>
+                <ion-item-group>
+                    <ion-item type="divider">
+                        C
+                    </ion-item>
+                    <ion-item>
+                        Cambodia
+                    </ion-item>
+                    <ion-item>
+                        Cameroon
+                    </ion-item>
+                    <ion-item>
+                        Canada
+                    </ion-item>
+                    <ion-item>
+                        Chile
+                    </ion-item>
+                    <ion-item>
+                        China
+                    </ion-item>
+                </ion-item-group>
+            </ion-list>
+        </ion-content>
+    </div>
+</template>

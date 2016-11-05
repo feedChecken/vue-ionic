@@ -9,11 +9,19 @@
             <ion-list>
                 <ion-item>
                     <ion-thumbnail slot="item-left" item-left :src="list.img"></ion-thumbnail>
-                    <ion-label>
+                    <h2>My Neighbor Totoro</h2>
+                    <p>Hayao Miyazaki • 1988</p>
+                    <ion-button type="clear" slot="item-right">
+                        view
+                    </ion-button>
+                </ion-item>
+                <ion-item>
+                    <ion-thumbnail slot="item-left" item-left :src="list.img"></ion-thumbnail>
+                    <ion-label slot="ion-label">
                         <h2>My Neighbor Totoro</h2>
                         <p>Hayao Miyazaki • 1988</p>
                     </ion-label>
-                    <ion-button type="clear" slot="item-right" >
+                    <ion-button type="clear" slot="item-right">
                         view
                     </ion-button>
                 </ion-item>
@@ -23,17 +31,7 @@
                         <h2>My Neighbor Totoro</h2>
                         <p>Hayao Miyazaki • 1988</p>
                     </ion-label>
-                     <ion-button type="clear" slot="item-right" >
-                        view
-                    </ion-button>
-                </ion-item>
-                <ion-item>
-                    <ion-thumbnail slot="item-left" item-left :src="list.img"></ion-thumbnail>
-                    <ion-label>
-                        <h2>My Neighbor Totoro</h2>
-                        <p>Hayao Miyazaki • 1988</p>
-                    </ion-label>
-                     <ion-button type="clear" slot="item-right" >
+                    <ion-button type="clear" slot="item-right">
                         view
                     </ion-button>
                 </ion-item>
