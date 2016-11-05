@@ -21,6 +21,7 @@ import Item from './components/item';
 import ItemGroup from './components/item-group';
 import Note from './components/note';
 import Thumbnail from './components/thumbnail';
+import Avatar from './components/avatar';
 const VERSION = '0.0.1';
 const DEFAULT_CONFIG = {
     theme: 'ios',
@@ -45,6 +46,7 @@ const install = function(Vue, opts = {}) {
     Vue.component(ItemGroup.name, ItemGroup);
     Vue.component(Note.name, Note);
     Vue.component(Thumbnail.name, Thumbnail);
+    Vue.component(Avatar.name, Avatar);
     Vue.prototype.$ionic = util.extend(DEFAULT_CONFIG, opts);
 };
 
@@ -69,5 +71,6 @@ module.exports = {
     Item,
     ItemGroup,
     Note,
-    Thumbnail
+    Thumbnail,
+    Avatar
 };

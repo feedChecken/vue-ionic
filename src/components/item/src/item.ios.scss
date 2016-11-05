@@ -23,7 +23,7 @@ $item-ios-sliding-content-background: $list-ios-background-color !default;
     color: $list-ios-text-color;
     background-color: $list-ios-background-color;
     transition: background-color 200ms linear;
-    display: block;
+    //display: block;
 }
 
 .item-ios.activated {

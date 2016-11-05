@@ -30,6 +30,16 @@ children.push({
     component: require('./views/list/thumbnails.vue')
 });
 
+children.push({
+    path: '/avatar',
+    component: require('./views/list/avatar.vue')
+});
+
+children.push({
+    path: '/divider',
+    component: require('./views/list/divider.vue')
+});
+
 const router = new VueRouter({
     mode: 'history',
     base: __dirname,
