@@ -27,7 +27,7 @@
         </ion-header>
         <ion-content padding>
             <ion-button color="light" @touchstart="clickHander" > 点击</ion-button>
-            <ion-button color="light"> default</ion-button><br/>
+            <ion-button color="light" v-touch:tap="tapHander"> tap default</ion-button><br/>
             <ion-button> default</ion-button><br/>
             <ion-button color="secondary">secondary</ion-button><br/>
             <ion-button color="danger">danger</ion-button><br/>
@@ -90,6 +90,9 @@
         methods: {
             clickHander() {
                 console.log('哈哈哈');
+            },
+            tapHander() {
+                console.log('tap 点击');
             }
         }
     }

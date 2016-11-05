@@ -10,6 +10,7 @@ import 'ionicons/dist/css/ionicons.css';
 import './themes/ionic.build.default.scss';
 
 import util from './utils/util';
+import VueTonch from './utils/vue-touch';
 import App from './components/app';
 import Button from './components/button';
 import Icon from './components/icon';
@@ -22,6 +23,7 @@ import ItemGroup from './components/item-group';
 import Note from './components/note';
 import Thumbnail from './components/thumbnail';
 import Avatar from './components/avatar';
+
 const VERSION = '0.0.1';
 const DEFAULT_CONFIG = {
     theme: 'ios',
@@ -30,6 +32,7 @@ const DEFAULT_CONFIG = {
 };
 const install = function(Vue, opts = {}) {
     if (install.installed) return;
+    Vue.use(VueTonch);
     Vue.component(Button.name, Button);
     Vue.component(Icon.name, Icon);
     Vue.component(App.name, App);
@@ -48,6 +51,7 @@ const install = function(Vue, opts = {}) {
     Vue.component(Thumbnail.name, Thumbnail);
     Vue.component(Avatar.name, Avatar);
     Vue.prototype.$ionic = util.extend(DEFAULT_CONFIG, opts);
+
 };
 
 /* istanbul ignore if */
