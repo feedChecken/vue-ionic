@@ -33,6 +33,8 @@ npm run build
 * [ion-note](https://github.com/feedCheicken/vue-ionic/tree/master/src/components/note)
 * [ion-content](https://github.com/feedCheicken/vue-ionic/tree/master/src/components/content)
 * [ion-app]
+* [ion-avatar]
+* [ion-thumbnail]
 
 ## Contribution（注） 
 > email me（ 正在筹划开发中 有意贡献代码请联系 xierenyuan@qq.com）
