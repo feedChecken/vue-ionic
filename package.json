@@ -14,7 +14,8 @@
   "dependencies": {
     "ionicons": "^3.0.0",
     "vue": "^2.0.1",
-    "vue-router": "^2.0.1"
+    "vue-router": "^2.0.1",
+    "vue-touch": "^1.1.0"
   },
   "devDependencies": {
     "@types/vue": "^1.0.31",

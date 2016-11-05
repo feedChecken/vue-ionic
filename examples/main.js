@@ -5,7 +5,6 @@ Vue.use(VueIonic, {
     theme: 'ios'
 });
 Vue.use(VueRouter);
-
 //config
 Vue.config.debug = true;
 
