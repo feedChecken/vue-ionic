@@ -23,6 +23,8 @@ import ItemGroup from './components/item-group';
 import Note from './components/note';
 import Thumbnail from './components/thumbnail';
 import Avatar from './components/avatar';
+import ItemSliding from './components/item-sliding';
+import ItemOptions from './components/item-options';
 
 const VERSION = '0.0.1';
 const DEFAULT_CONFIG = {
@@ -50,6 +52,8 @@ const install = function(Vue, opts = {}) {
     Vue.component(Note.name, Note);
     Vue.component(Thumbnail.name, Thumbnail);
     Vue.component(Avatar.name, Avatar);
+    Vue.component(ItemSliding.name, ItemSliding);
+    Vue.component(ItemOptions.name, ItemOptions);
     Vue.prototype.$ionic = util.extend(DEFAULT_CONFIG, opts);
 
 };
@@ -76,5 +80,7 @@ module.exports = {
     ItemGroup,
     Note,
     Thumbnail,
-    Avatar
+    Avatar,
+    ItemSliding,
+    ItemOptions
 };

@@ -39,6 +39,12 @@ children.push({
     component: require('./views/list/divider.vue')
 });
 
+
+children.push({
+    path: '/sliding',
+    component: require('./views/list/sliding.vue')
+});
+
 const router = new VueRouter({
     mode: 'history',
     base: __dirname,

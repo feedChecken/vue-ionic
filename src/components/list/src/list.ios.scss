@@ -49,11 +49,11 @@ $list-ios-header-background-color: 0 0!default;
     border-width: 0;
 }
 
-.list-ios ion-item-options {
+.list-ios .ion-item-options {
     border-bottom: $hairlines-width solid $list-ios-border-color;
 }
 
-.list-ios ion-item-options .button {
+.list-ios .ion-item-options .button {
     display: inline-flex;
     align-items: center;
     margin: 0;
@@ -64,7 +64,7 @@ $list-ios-header-background-color: 0 0!default;
     box-sizing: border-box;
 }
 
-.list-ios ion-item-options .button::before {
+.list-ios .ion-item-options .button::before {
     margin: 0 auto;
 }
 
@@ -108,8 +108,8 @@ $list-ios-header-background-color: 0 0!default;
 
 // iOS No Lines List
 // --------------------------------------------------
-.list-ios[no-lines] ion-list-header,
-.list-ios[no-lines] ion-item-options,
+.list-ios[no-lines] .ion-list-header,
+.list-ios[no-lines] .ion-item-options,
 .list-ios[no-lines] .item,
 .list-ios[no-lines] .item .item-inner {
     border-width: 0;

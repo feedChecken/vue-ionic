@@ -1,9 +1,9 @@
 <template>
     <button @touchstart="handleTouchStart"  class="disable-hover  " :class="[
         role,
-        theme ? role + theme:'',
-        type ? role + type : '',
-        theme ? role + type + '-' + theme:'',
+        theme ? role +'-' + theme:'',
+        type ? role + '-' + type : '',
+        theme ? role + '-' + type + '-' + theme:'',
         aColor,
         isActive?'activated':'',
         aRound,
@@ -24,7 +24,7 @@
         mixins: [ThemeMixin],
         data() {
             return {
-                role: 'button-',
+                role: 'button',
                 isActive: false,
                 //如果是在item 组件内部则为true
                 isParentItem: false
@@ -36,9 +36,9 @@
                 switch (this.type) {
                     case 'outline':
                     case 'clear':
-                        return `${this.role}${this.type}-${theme}-${this.color}`;
+                        return `${this.role}-${this.type}-${theme}-${this.color}`;
                     default:
-                        return `${this.role}${theme}-${this.color}`;
+                        return `${this.role}-${theme}-${this.color}`;
                 }
             },
             aRound: function() {
@@ -55,7 +55,7 @@
                 switch (this.size) {
                     case 'small':
                     case 'large':
-                        return `${this.role}${size} ${this.role}${size}-${this.theme}`;
+                        return `${this.role}-${size} ${this.role}-${size}-${this.theme}`;
                     default:
                         return '';
                 }
@@ -65,7 +65,7 @@
             // 如果是在组件 buttons 下则修改前缀为 bar-button-
             let name = this.$parent.$data.componentName;
             if (name === 'buttons') {
-                this.role = 'bar-button-';
+                this.role = 'bar-button';
             }
             //如果在item 组件里 则加上class  
             if (name === 'ionItem') {

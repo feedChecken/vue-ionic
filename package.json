@@ -15,7 +15,8 @@
     "ionicons": "^3.0.0",
     "vue": "^2.0.1",
     "vue-router": "^2.0.1",
-    "vue-touch": "^1.1.0"
+    "vue-touch": "^1.1.0",
+    "wind-dom": "0.0.3"
   },
   "devDependencies": {
     "@types/vue": "^1.0.31",

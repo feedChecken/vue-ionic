@@ -2,18 +2,18 @@
 // Item Sliding
 // --------------------------------------------------
 // The hidden right-side buttons that can be exposed under a list item with dragging.
-ion-item-sliding {
+.ion-item-sliding {
     position: relative;
     display: block;
     overflow: hidden;
     width: 100%;
 }
 
-ion-item-sliding .item {
+.ion-item-sliding .item {
     position: static;
 }
 
-ion-item-options {
+.ion-item-options {
     position: absolute;
     top: 0;
     right: 0;
@@ -25,13 +25,13 @@ ion-item-options {
     visibility: hidden;
 }
 
-ion-item-options[side=left] {
+.ion-item-options[side=left] {
     right: auto;
     left: 0;
     justify-content: flex-start;
 }
 
-ion-item-options .button {
+.ion-item-options .button {
     margin: 0;
     padding: 0 .7em;
     height: 100%;
@@ -40,18 +40,18 @@ ion-item-options .button {
     box-sizing: content-box;
 }
 
-ion-item-options:not([icon-left]) .button:not([icon-only]) {
+.ion-item-options:not([icon-left]) .button:not([icon-only]) {
     .button-inner {
         flex-direction: column;
     }
-    ion-icon {
+    .ion-icon {
         padding-right: 0;
         padding-bottom: .3em;
         padding-left: 0;
     }
 }
 
-ion-item-sliding.active-slide {
+.ion-item-sliding.active-slide {
     .item,
     .item.activated {
         position: relative;
@@ -61,14 +61,14 @@ ion-item-sliding.active-slide {
         pointer-events: none;
         will-change: transform;
     }
-    ion-item-options {
+    .ion-item-options {
         display: flex;
     }
-    &.active-options-left ion-item-options[side=left] {
+    &.active-options-left .ion-item-options[side=left] {
         width: 100%;
         visibility: visible;
     }
-    &.active-options-right ion-item-options:not([side=left]) {
+    &.active-options-right .ion-item-options:not([side=left]) {
         width: 100%;
         visibility: visible;
     }
@@ -76,21 +76,21 @@ ion-item-sliding.active-slide {
 
 // Item Expandable Animation
 // --------------------------------------------------
-button[expandable] {
+.button[expandable] {
     flex-shrink: 0;
     transition-duration: 0;
     transition-property: none;
     transition-timing-function: cubic-bezier(.65, .05, .36, 1);
 }
 
-ion-item-sliding.active-swipe-right button[expandable] {
+.ion-item-sliding.active-swipe-right button[expandable] {
     order: 1;
     padding-left: 90%;
     transition-duration: .6s;
     transition-property: padding-left;
 }
 
-ion-item-sliding.active-swipe-left button[expandable] {
+.ion-item-sliding.active-swipe-left button[expandable] {
     order: -1;
     padding-right: 90%;
     transition-duration: .6s;
