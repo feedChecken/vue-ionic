@@ -1,30 +1,30 @@
 /**
- * 
+ *
  * @author xierenyuan@qq.com
- * @export 
- * 
+ * @export
+ *
  */
 
-import './sass/ui.scss';
-import 'ionicons/dist/css/ionicons.css';
-import './themes/ionic.build.default.scss';
-
-import util from './utils/util';
-import VueTonch from './utils/vue-touch';
-import App from './components/app';
-import Button from './components/button';
-import Icon from './components/icon';
-import { Header, Footer, ToolBar, Title, Buttons } from './components/header';
-import Content from './components/content';
-import Label from './components/label';
-import { List, ListHeader } from './components/list';
-import Item from './components/item';
-import ItemGroup from './components/item-group';
-import Note from './components/note';
-import Thumbnail from './components/thumbnail';
-import Avatar from './components/avatar';
-import ItemSliding from './components/item-sliding';
-import ItemOptions from './components/item-options';
+import "./sass/ui.scss";
+import "ionicons/dist/css/ionicons.css";
+import "./themes/ionic.build.default.scss";
+import util from "./utils/util";
+import VueTonch from "./utils/vue-touch";
+import App from "./components/app";
+import Button from "./components/button";
+import Icon from "./components/icon";
+import {Header, Footer, ToolBar, Title, Buttons} from "./components/header";
+import Content from "./components/content";
+import Label from "./components/label";
+import {List, ListHeader} from "./components/list";
+import Item from "./components/item";
+import ItemGroup from "./components/item-group";
+import Note from "./components/note";
+import Thumbnail from "./components/thumbnail";
+import Avatar from "./components/avatar";
+import ItemSliding from "./components/item-sliding";
+import ItemSlidingTest from "./components/item-sliding/index-test";
+import ItemOptions from "./components/item-options";
 
 const VERSION = '0.0.1';
 const DEFAULT_CONFIG = {
@@ -32,7 +32,7 @@ const DEFAULT_CONFIG = {
     version: VERSION,
     iconMode: ''
 };
-const install = function(Vue, opts = {}) {
+const install = function (Vue, opts = {}) {
     if (install.installed) return;
     Vue.use(VueTonch);
     Vue.component(Button.name, Button);
@@ -53,6 +53,7 @@ const install = function(Vue, opts = {}) {
     Vue.component(Thumbnail.name, Thumbnail);
     Vue.component(Avatar.name, Avatar);
     Vue.component(ItemSliding.name, ItemSliding);
+    Vue.component(ItemSlidingTest.name, ItemSlidingTest);
     Vue.component(ItemOptions.name, ItemOptions);
     Vue.prototype.$ionic = util.extend(DEFAULT_CONFIG, opts);
 
@@ -61,7 +62,8 @@ const install = function(Vue, opts = {}) {
 /* istanbul ignore if */
 if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue);
-};
+}
+;
 
 module.exports = {
     version: VERSION,

@@ -68,6 +68,7 @@
     @import './item-media.scss';
     @import './item-reorder.scss';
     @import './item-sliding.scss';
+    @import './item-sliding-test.scss';
     @import './item.ios.scss';
     @import './item.md.scss';
     @import './item.wp.scss';
