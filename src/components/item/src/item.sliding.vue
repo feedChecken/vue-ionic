@@ -7,9 +7,7 @@
 <script>
     import util from 'src/utils/util';
     import Clickoutside from 'src/utils/clickoutside';
-    import {
-        once
-    } from 'wind-dom/src/event';
+    //import { once } from 'wind-dom/src/event';
     export default {
         name: 'ion-item-sliding',
         directives: {
@@ -47,7 +45,6 @@
                 return `translate3d(${offset}px, 0, 0)`;
             },
             onSwipeMove(offset = 0) {
-                console.log('onSwipeMove');
                 this.itemWrap.style.webkitTransform = this.translate3d(offset);
                 if (offset === 0) {
                     this.dragging = false;
@@ -58,7 +55,6 @@
                 this.swiping = true;
             },
             onStartDrag(evt) {
-                console.log('onStartDrag');
                 evt = evt.changedTouches ? evt.changedTouches[0] : evt;
                 this.dragging = true;
                 this.start.x = evt.pageX;
@@ -87,7 +83,6 @@
                 this.onSwipeMove(offsetLeft);
             },
             endDrag(evt) {
-                console.log('endDrag');
                 if (!this.swiping) return;
                 //如果 this.offsetLeft > 0 是从左向右滑动 小于0 是从右到左滑动
                 this.swipeLeaveTransition(this.offsetLeft > 0 ? 1 : -1);
@@ -96,7 +91,6 @@
                 setTimeout(() => {
                     this.swipeLeave = true;
                     const oLeft = Math.abs(this.offsetLeft);
-                    console.log('oLeft', oLeft);
                     //从右到左滑动 如果滑动的距离超过按钮组的百分之40 则 显示出按钮来
                     if (direction < 0 && oLeft > this.rightWidth * 0.4) {
                         this.onSwipeMove(-this.rightWidth);
@@ -104,15 +98,14 @@
                         this.opened = true;
                         return;
                     }
-                    console.log('233 334');
                     this.onSwipeMove(0);
-                    once(this.itemWrap, 'webkitTransitionEnd', _ => {
-                        console.log('233');
-                        this.itemWrap.style.webkitTransform = this.rightDefaultTransform;
-                        //this.rightWrap.style.webkitTransform = this.rightDefaultTransform;
-                        this.swipeLeave = false;
-                        this.swiping = false;
-                    });
+                    //once(this.itemWrap, 'webkitTransitionEnd', _ => {
+                    // console.log('233');
+                    // this.itemWrap.style.webkitTransform = this.rightDefaultTransform;
+                    //this.rightWrap.style.webkitTransform = this.rightDefaultTransform;
+                    //this.swipeLeave = false;
+                    //this.swiping = false;
+                    //});
                 }, 0);
             }
 
