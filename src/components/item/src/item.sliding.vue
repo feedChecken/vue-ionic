@@ -96,7 +96,7 @@
                 setTimeout(() => {
                     this.swipeLeave = true;
                     const oLeft = Math.abs(this.offsetLeft);
-                    console.log(oLeft);
+                    console.log('oLeft', oLeft);
                     //从右到左滑动 如果滑动的距离超过按钮组的百分之40 则 显示出按钮来
                     if (direction < 0 && oLeft > this.rightWidth * 0.4) {
                         this.onSwipeMove(-this.rightWidth);

@@ -11,6 +11,7 @@
 
 .ion-item-sliding .item {
     position: static;
+    transition: transform 150ms ease-in-out;
 }
 
 .ion-item-options {
@@ -23,6 +24,7 @@
     height: 100%;
     font-size: 14px;
     visibility: hidden;
+    transition: transform 150ms ease-in-out;
 }
 
 .ion-item-options[side=left] {
