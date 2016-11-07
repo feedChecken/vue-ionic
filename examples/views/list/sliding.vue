@@ -32,6 +32,23 @@
                         </ion-button>
                     </ion-item-options>
                 </ion-item-sliding>
+                <ion-item-sliding >
+                    <ion-item >
+                        <ion-avatar slot="item-left" item-left :src="list.img"></ion-avatar>
+                        <h2>Ren Hong</h2>
+                        <p>I'm loser codeer.</p>
+                    </ion-item>
+                    <ion-item-options>
+                        <ion-button color="primary" icon-left @click.native="sayHi">
+                            <ion-icon name="text"></ion-icon>
+                            Text
+                        </ion-button>
+                        <ion-button color="secondary" icon-left>
+                            <ion-icon name="call"></ion-icon>
+                            Call
+                        </ion-button>
+                    </ion-item-options>
+                </ion-item-sliding>
             </ion-list>
         </ion-content>
     </div>
@@ -46,6 +63,11 @@
         },
         created() {
             this.list.img = imgSrc;
+        },
+        methods: {
+            sayHi() {
+                alert('hello ');
+            }
         }
     }
 </script>
