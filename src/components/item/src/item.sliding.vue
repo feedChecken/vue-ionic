@@ -1,6 +1,6 @@
 <template>
     <div v-clickoutside:touchstart="onSwipeMove" @click="onSwipeMove()" @touchstart="onStartDrag" @touchmove="onDrag" @touchend="endDrag"
-        class="ion-item-sliding item-wrapper" :class="[dragging ? 'active-slide active-options-right' : '' ]">
+        class="ion-item-sliding item-wrapper" :class="[actived ? 'active-slide active-options-right' : '' ]">
         <slot></slot>
     </div>
 </template>
@@ -19,7 +19,8 @@
                     x: 0,
                     y: 0
                 },
-                dragging: false
+                dragging: false,
+                actived: false
             }
         },
         mounted() {
@@ -48,6 +49,7 @@
                 this.itemWrap.style.webkitTransform = this.translate3d(offset);
                 if (offset === 0) {
                     this.dragging = false;
+                    this.actived = false;
                     this.start.x = 0;
                     this.start.y = 0;
                     this.offsetLeft = 0;
@@ -80,6 +82,7 @@
                 swiping = !(x < 5 || (x >= 5 && y >= x * 1.73));
                 if (!swiping) return;
                 evt.preventDefault();
+                this.actived = true;
                 this.onSwipeMove(offsetLeft);
             },
             endDrag(evt) {
