@@ -32,6 +32,7 @@ $action-sheet-max-width:                         500px !default;
   max-width: $action-sheet-max-width;
 
   transform: translate3d(0, 100%, 0);
+  transition: all 500ms ease-in-out;
 }
 
 .action-sheet-button {

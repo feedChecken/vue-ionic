@@ -1,19 +1,27 @@
-import ActionSheet from './src/ActionSheet.vue'
+/**
+ * @author William Du
+ * @email parox2014@gmail.com
+ * @qq 515344469
+ */
+
+import ActionSheet from './src/ActionSheet'
+
+
+ActionSheet.create = function (option) {
+  let actionSheet = new ActionSheet({
+    data: option
+  });
+  
+  actionSheet.$mount();
+  
+  document.body.appendChild(actionSheet.$el);
+  
+  return actionSheet;
+};
+
 
 /* istanbul ignore next */
 ActionSheet.install = function (Vue) {
   Vue.component(ActionSheet.name, ActionSheet);
 };
-
-ActionSheet.create = function (option) {
-  var actionsheet = new ActionSheet({
-    el: document.createElement('div'),
-    data: option
-  });
-  
-  document.body.appendChild(actionsheet.$el);
-
-  return actionsheet;
-};
-
 export default ActionSheet;

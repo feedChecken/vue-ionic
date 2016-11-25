@@ -8,12 +8,12 @@
     pointer-events: none;
 }
 
-[icon-left] ion-icon {
+[icon-left] .ion-icon {
     @include button-icon;
     padding-right: .3em;
 }
 
-[icon-right] ion-icon {
+[icon-right] .ion-icon {
     @include button-icon;
     padding-left: .4em;
 }
@@ -23,7 +23,7 @@
     min-width: .9em;
 }
 
-[icon-only] ion-icon {
+[icon-only] .ion-icon {
     padding: 0 .5em;
     font-size: 1.8em;
     line-height: .67;

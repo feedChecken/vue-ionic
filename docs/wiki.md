@@ -41,3 +41,9 @@
 ## 开发须知
 > 基于vue 2.0 开发
 > 规范 https://github.com/airbnb/javascript
+
+## 主题获取
+```javascript
+//在代码vue 中可以通过  this.$ionic.theme 获取到主题 默认是 ios  可以设置成md  可通过如下代码设置
+Vue.use(VueIonic, { theme: 'md' });
+```

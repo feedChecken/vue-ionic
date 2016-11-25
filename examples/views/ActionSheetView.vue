@@ -1,6 +1,8 @@
 <template lang="html">
   <div class="view">
-    <button color="assertive" v-on:click="onClick">click me</button>
+    <ion-button @touchstart="onClick">click me</ion-button>
+
+    <ion-action-sheet></ion-action-sheet>
   </div>
 </template>
 <script lang="babel">
@@ -15,23 +17,7 @@
     methods: {
       onClick(){
         var actionSheet=ActionSheet.create({
-          title:'确定删除吗',
-          buttons:[
-            {
-              role:'destructive',
-              text:'删除',
-              handler(){
-                console.log('remove')
-              }
-            },
-            {
-
-              text:'编辑',
-              handler(){
-                console.log('remove')
-              }
-            }
-          ]
+          title:'确定删除吗'
         });
 
         actionSheet.show();
