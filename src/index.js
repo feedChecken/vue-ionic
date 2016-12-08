@@ -4,7 +4,6 @@
  * @export
  *
  */
-
 import "./sass/ui.scss";
 import "ionicons/dist/css/ionicons.css";
 import "./themes/ionic.build.default.scss";
@@ -13,10 +12,10 @@ import VueTonch from "./utils/vue-touch";
 import App from "./components/app";
 import Button from "./components/button";
 import Icon from "./components/icon";
-import {Header, Footer, ToolBar, Title, Buttons} from "./components/header";
+import { Header, Footer, ToolBar, Title, Buttons } from "./components/header";
 import Content from "./components/content";
 import Label from "./components/label";
-import {List, ListHeader} from "./components/list";
+import { List, ListHeader } from "./components/list";
 import Item from "./components/item";
 import ItemGroup from "./components/item-group";
 import Note from "./components/note";
@@ -25,6 +24,7 @@ import Avatar from "./components/avatar";
 import ItemSliding from "./components/item-sliding";
 import ItemSlidingTest from "./components/item-sliding/index-test";
 import ItemOptions from "./components/item-options";
+import Input from "./components/input";
 
 const VERSION = '0.0.1';
 const DEFAULT_CONFIG = {
@@ -32,7 +32,7 @@ const DEFAULT_CONFIG = {
     version: VERSION,
     iconMode: ''
 };
-const install = function (Vue, opts = {}) {
+const install = function(Vue, opts = {}) {
     if (install.installed) return;
     Vue.use(VueTonch);
     Vue.component(Button.name, Button);
@@ -55,6 +55,7 @@ const install = function (Vue, opts = {}) {
     Vue.component(ItemSliding.name, ItemSliding);
     Vue.component(ItemSlidingTest.name, ItemSlidingTest);
     Vue.component(ItemOptions.name, ItemOptions);
+    Vue.component(Input.name, Input);
     Vue.prototype.$ionic = util.extend(DEFAULT_CONFIG, opts);
 
 };
@@ -62,8 +63,7 @@ const install = function (Vue, opts = {}) {
 /* istanbul ignore if */
 if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue);
-}
-;
+};
 
 module.exports = {
     version: VERSION,
@@ -84,5 +84,6 @@ module.exports = {
     Thumbnail,
     Avatar,
     ItemSliding,
-    ItemOptions
+    ItemOptions,
+    Input
 };

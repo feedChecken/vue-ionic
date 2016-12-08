@@ -5,7 +5,7 @@
 
 import Item from './src/item.vue';
 
-Item.install = function() {
+Item.install = function(Vue) {
     Vue.component(Item.name, Item);
 };
 

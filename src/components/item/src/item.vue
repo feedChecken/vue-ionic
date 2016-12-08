@@ -1,5 +1,5 @@
 <template>
-    <a class="item " :class="['item-'+theme]">
+    <a class="item " :class="['item-'+theme,itemCls]">
         <slot name="item-left"></slot>
         <div class="item-inner">
             <div class="input-wrapper">
@@ -20,6 +20,11 @@
     export default {
         name: 'ion-item',
         mixins: [ItemMixin],
+        data() {
+            return {
+                itemCls: ''
+            }
+        },
         mounted() {
             this.init();
         },
@@ -58,6 +63,18 @@
                 // 如果是 divider 类型 需要添加 class  ion-item-divider
                 if (type == 'divider' && !util.hasClass($el, 'ion-item-divider')) {
                     util.addClass($el, 'ion-item-divider');
+                }
+            },
+            addClass(cls) {
+                let $el = this.$el;
+                if (!util.hasClass($el, cls)) {
+                    util.addClass($el, cls);
+                }
+            },
+            removeClass(cls) {
+                let $el = this.$el;
+                if (util.hasClass($el, cls)) {
+                    util.removeClass($el, cls);
                 }
             }
         }

@@ -82,10 +82,22 @@
                     <ion-icon name="home"></ion-icon>
                 </ion-button>
             </p>
+            <p>
+                <Button>
+                    哈哈
+                </Button>
+                <xButton>
+                    XButton
+                </xButton>
+                <x-button>哈哈哈</x-button>
+            </p>
         </ion-content>
     </div>
 </template>
 <script>
+    import Vue from 'vue';
+    import iButton from '../../src/components/button';
+    Vue.component('Button', iButton);
     export default {
         methods: {
             clickHander() {
@@ -94,6 +106,10 @@
             tapHander() {
                 console.log('tap 点击');
             }
+        },
+        components: {
+            xButton: iButton
         }
+
     }
 </script>
