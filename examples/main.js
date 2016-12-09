@@ -20,6 +20,11 @@ const children = [{
 }];
 
 children.push({
+    path: '/',
+    component: require('./views/index.vue')
+});
+
+children.push({
     path: '/list',
     component: require('./views/list/list.vue')
 });
@@ -71,7 +76,7 @@ children.push({
 });
 
 const router = new VueRouter({
-    mode: 'history',
+    // mode: 'history',
     base: __dirname,
     routes: [{
         path: '/',
