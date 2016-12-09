@@ -55,6 +55,21 @@ children.push({
     component: require('./views/input/input.vue')
 });
 
+children.push({
+    path: '/input1',
+    component: require('./views/input/input.1.vue')
+});
+
+children.push({
+    path: '/inputFloating',
+    component: require('./views/input/input.floating.vue')
+});
+
+children.push({
+    path: '/inputStacked',
+    component: require('./views/input/input.stacked.vue')
+});
+
 const router = new VueRouter({
     mode: 'history',
     base: __dirname,

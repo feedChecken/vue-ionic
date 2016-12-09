@@ -4,7 +4,7 @@
         <div class="item-inner">
             <div class="input-wrapper">
                 <slot name="ion-label"></slot>
-                <ion-label ref="label" v-if="viewLabel">
+                <ion-label ref="label" >
                     <slot></slot>
                 </ion-label>
                 <slot name="item-content"></slot>
@@ -75,6 +75,18 @@
                 let $el = this.$el;
                 if (util.hasClass($el, cls)) {
                     util.removeClass($el, cls);
+                }
+            },
+            //设置 label 的  floating 
+            addLabelAttr(attr, val = '') {
+                /*
+                 *viewLabel 为true 则没有设置 slot 为 ion-label else 则设置呢 
+                 * 设置了 如下
+                 * <ion-label slot="ion-label">password</ion-label>
+                 */
+                let $labelEl = this.getText().length > 0 ? this.$refs.label.$el : this.$slots['ion-label'][0].elm;
+                if (!$labelEl.hasAttribute(attr)) {
+                    $labelEl.setAttribute(attr, val);
                 }
             }
         }

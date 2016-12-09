@@ -3,7 +3,7 @@
         <div class="item-inner">
             <div class="input-wrapper">
                 <slot name="ion-label"></slot>
-                <ion-label ref="label" v-if="viewLabel">
+                <ion-label ref="label" >
                     <slot></slot>
                 </ion-label>
                 <slot name="item-content"></slot>

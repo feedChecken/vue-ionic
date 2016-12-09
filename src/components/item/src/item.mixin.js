@@ -3,16 +3,8 @@ export default {
     mixins: [ThemeMixin],
     data() {
         return {
-            viewLabel: true,
             componentName: 'ionItem'
         };
-    },
-    mounted() {
-        //如果木有填label 则隐藏标签
-        if (this.viewLabel) {
-            let labelText = this.getText();
-            this.viewLabel = (labelText.length > 0);
-        }
     },
     methods: {
         getText() {
@@ -20,4 +12,4 @@ export default {
             return $labelEl.textContent || '';
         }
     }
-}
+};

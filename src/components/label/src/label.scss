@@ -30,8 +30,8 @@
     max-width: 200px;
 }
 
-.item-label-stacked ion-label,
-.item-label-floating ion-label {
+.item-label-stacked .ion-label,
+.item-label-floating .ion-label {
     align-self: stretch;
     width: auto;
     max-width: 100%;
@@ -48,8 +48,8 @@
     flex-direction: column;
 }
 
-.item-label-stacked ion-select,
-.item-label-floating ion-select {
+.item-label-stacked .ion-select,
+.item-label-floating .ion-select {
     align-self: stretch;
     max-width: 100%;
 }

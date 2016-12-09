@@ -166,6 +166,9 @@ export default {
         removed = removed.replace(/(^\s+)|(\s+$)/g, '');
         //替换原来的 class.
         el.className = removed;
+    },
+    isUndefined(value) {
+        return value === undefined;
     }
 
 };
