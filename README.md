@@ -4,6 +4,9 @@
 - [Vue官网](http://vuejs.org/)  
 - [Ionic官网](http://ionicframework.com/)    
 
+## Demo ( 哈哈 时间关系搞了个最丑的demo)
+- [点我我是demo](https://feedchecken.github.io/vue-ionic/#/)     
+
 ## Quick Start(启动)     
 
 ``` bash
