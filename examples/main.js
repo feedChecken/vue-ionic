@@ -76,7 +76,6 @@ children.push({
 });
 
 const router = new VueRouter({
-    // mode: 'history',
     base: __dirname,
     routes: [{
         path: '/',
@@ -89,3 +88,22 @@ const router = new VueRouter({
 const app = new Vue({
     router
 }).$mount('#app');
+
+let indexScrollTop = 0;
+router.beforeEach((route, redirect, next) => {
+    if (route.path !== '/') {
+        indexScrollTop = document.body.scrollTop;
+    }
+    document.title = route.meta.title || document.title;
+    next();
+});
+
+router.afterEach(route => {
+    if (route.path !== '/') {
+        document.body.scrollTop = 0;
+    } else {
+        Vue.nextTick(() => {
+            document.body.scrollTop = indexScrollTop;
+        });
+    }
+});
