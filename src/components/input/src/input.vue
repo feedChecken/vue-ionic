@@ -1,24 +1,19 @@
 <template>
-    <div class="ion-input">
-     <input
-      @change="$emit('change', currentValue)"
-      v-clickoutside="doCloseActive"
-      ref="input"
-      class="text-input "
-      :class="['text-input-'+theme]"
-      :placeholder="placeholder"
-      :number="type === 'number'"
-      :type="type"
-      @focus="active = true"
-      @blur="active = false"
-      :disabled="disabled"
-      :readonly="readonly"
-      :value="currentValue"
-      @input="handleInput" />
-        <ion-button v-if="!disableClear" class="text-input-clear-icon" @click.native="handleClear"  type="clear"  icon-only>
-             <i role="img" class="ion-icon ion-ios-close-outline"></i>
-         </ion-button> 
-    </div>
+	<div :class="[
+        type === 'textarea' ?'ion-textarea input-ios':'ion-input',
+    ]">
+		<template v-if="type !== 'textarea'">
+			<input @change="$emit('change', currentValue)" v-clickoutside="doCloseActive" ref="input" class="text-input " :class="['text-input-'+theme]"
+							:placeholder="placeholder" :number="type === 'number'" :type="type" @focus="active = true" @blur="active = false" :disabled="disabled"
+							:readonly="readonly" :value="currentValue" @input="handleInput" />
+			<ion-button v-if="!disableClear" class="text-input-clear-icon" @click.native="handleClear" type="clear" icon-only>
+				<i role="img" class="ion-icon ion-ios-close-outline"></i>
+			</ion-button>
+		</template>
+<textarea v-else @change="$emit('change', currentValue)" v-clickoutside="doCloseActive" ref="input" class="text-input " :class="['text-input-'+theme]" :placeholder="placeholder" @focus="active = true" @blur="active = false" :disabled="disabled" :readonly="readonly"
+    :value="currentValue" @input="handleInput">
+        </textarea>
+</div>
 </template>
 <script>
     import ThemeMixin from 'src/minins/theme.mixins';

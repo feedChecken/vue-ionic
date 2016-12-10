@@ -70,6 +70,11 @@ children.push({
     component: require('./views/input/input.stacked.vue')
 });
 
+children.push({
+    path: '/textarea',
+    component: require('./views/input/textarea.vue')
+});
+
 const router = new VueRouter({
     mode: 'history',
     base: __dirname,
