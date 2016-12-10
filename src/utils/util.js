@@ -169,6 +169,30 @@ export default {
     },
     isUndefined(value) {
         return value === undefined;
+    },
+    isString(val) {
+        return typeof val === 'string';
+    },
+    isNumber(val) {
+        return typeof val === 'number';
+    },
+    isFunction(val) {
+        return typeof val === 'function';
+    },
+    isDefined(val) {
+        return typeof val !== 'undefined';
+    },
+    isPresent(val) {
+        return val !== undefined && val !== null;
+    },
+    isBlank(val) {
+        return val === undefined || val === null;
+    },
+    isObject(val) {
+        return typeof val === 'object';
+    },
+    isArray(val) {
+        return Array.isArray(val);
     }
 
 };
