@@ -1,18 +1,16 @@
 <template>
     <div class="ion-action-sheet " :class="['action-sheet-'+theme]">
-        <ion-backdrop @click.native="onClose"  ref="backdrop"></ion-backdrop>
+`        <ion-backdrop @click.native="onClose"  ref="backdrop"></ion-backdrop>
         <transition name="ion-action-sheet-fade">
             <div v-show="currentValue" class="action-sheet-wrapper">
                 <div class="action-sheet-container">
                     <div class="action-sheet-group">
-                        <div class="action-sheet-title">title</div>
-                        <ion-button prefix="action-sheet-button" class="action-sheet-icon action-sheet-destructive"> 哈哈 </ion-button>
-                        <ion-button prefix="action-sheet-button" class=" action-sheet-icon"> 哈哈 </ion-button>
-                        <ion-button prefix="action-sheet-button" class=" action-sheet-icon"> 哈哈 </ion-button>
-                        <ion-button prefix="action-sheet-button" class=" action-sheet-icon"> 哈哈 </ion-button>
+                        <div class="action-sheet-title">{{ title }}</div>
+                        <ion-button v-for="item in buttons" :class="[item.type === 'del'?'action-sheet-destructive':'']" @click.native.stop="itemClick(item)" prefix="action-sheet-button"> {{ item.text }} 
+                        </ion-button>
                     </div>
-                    <div class="action-sheet-group">
-                        <ion-button prefix="action-sheet-button" class=" action-sheet-icon">cancel</ion-button>
+                    <div class="action-sheet-group" >
+                        <ion-button @click.native="onClose" prefix="action-sheet-button" class=" action-sheet-icon">cancel</ion-button>
                     </div>
                 </div>
             </div>
@@ -55,6 +53,12 @@
                     this.$el.remove();
                 }, 350);
 
+            },
+            itemClick(item) {
+                if (item.handler && typeof item.handler === 'function') {
+                    item.handler();
+                }
+                this.onClose();
             }
         },
         props: {
