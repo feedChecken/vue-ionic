@@ -72,6 +72,10 @@
                 this.isParentItem = true;
             }
 
+            if (this.prefix) {
+                this.role = this.prefix;
+            }
+
         },
         methods: {
             handleTouchStart(evt) {
@@ -100,6 +104,7 @@
             round: Boolean,
             block: Boolean,
             full: Boolean,
+            prefix: String,
             size: {
                 type: String,
                 default: 'default',

@@ -25,6 +25,8 @@ import ItemSliding from "./components/item-sliding";
 import ItemSlidingTest from "./components/item-sliding/index-test";
 import ItemOptions from "./components/item-options";
 import Input from "./components/input";
+import Backgroup from "./components/backdrop";
+import ActionSheet from "./components/action-sheet";
 
 const VERSION = '0.0.1';
 const DEFAULT_CONFIG = {
@@ -56,6 +58,8 @@ const install = function(Vue, opts = {}) {
     Vue.component(ItemSlidingTest.name, ItemSlidingTest);
     Vue.component(ItemOptions.name, ItemOptions);
     Vue.component(Input.name, Input);
+    Vue.component(Backgroup.name, Backgroup);
+    Vue.prototype.$actionSheet = ActionSheet;
     Vue.prototype.$ionic = util.extend(DEFAULT_CONFIG, opts);
 
 };
@@ -85,5 +89,7 @@ module.exports = {
     Avatar,
     ItemSliding,
     ItemOptions,
-    Input
+    Input,
+    Backgroup,
+    ActionSheet
 };

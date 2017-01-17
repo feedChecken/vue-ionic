@@ -75,6 +75,11 @@ children.push({
     component: require('./views/input/textarea.vue')
 });
 
+children.push({
+    path: '/actionSheet',
+    component: require('./views/action-sheet/index.vue')
+});
+
 const router = new VueRouter({
     mode: 'history',
     base: __dirname,
