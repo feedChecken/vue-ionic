@@ -40,10 +40,10 @@
         methods: {
             open() {
                 this.$refs.backdrop.setStyle('opacity', '0.4');
-                this.$refs.backdrop.setStyle('pointer-events', 'none');
+                this.$refs.backdrop.disableClick();
                 this.currentValue = true;
                 setTimeout(() => {
-                    this.$refs.backdrop.setStyle('pointer-events', 'auto');
+                    this.$refs.backdrop.enableClick();
                 }, 400);
             },
             onClose() {
@@ -85,10 +85,7 @@
         transform: translate3d(0, 100%, 0);
     }
     
-    .ion-action-sheet-fade-enter {
-        transform: translate3d(0, 100%, 0);
-    }
-    
+    .ion-action-sheet-fade-enter,
     .ion-action-sheet-fade-leave-to {
         transform: translate3d(0, 100%, 0);
     }
