@@ -27,6 +27,7 @@ import ItemOptions from "./components/item-options";
 import Input from "./components/input";
 import Backgroup from "./components/backdrop";
 import ActionSheet from "./components/action-sheet";
+import Alert from "./components/alert";
 
 const VERSION = '0.0.1';
 const DEFAULT_CONFIG = {
@@ -60,6 +61,7 @@ const install = function(Vue, opts = {}) {
     Vue.component(Input.name, Input);
     Vue.component(Backgroup.name, Backgroup);
     Vue.prototype.$actionSheet = ActionSheet;
+    Vue.prototype.$alert = Alert;
     Vue.prototype.$ionic = util.extend(DEFAULT_CONFIG, opts);
 
 };
@@ -91,5 +93,6 @@ module.exports = {
     ItemOptions,
     Input,
     Backgroup,
-    ActionSheet
+    ActionSheet,
+    Alert
 };
